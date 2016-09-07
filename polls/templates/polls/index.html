@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+{% if latest_question_list %}
+
+
+    {% for question in latest_question_list %}
+ <div class="content1" >
+       <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+
+        <p>{{ question.body|lower|truncatewords:"20" }}</p>
+        <a href="{% url 'polls:detail' question.id %}">Read More </a>
+        </div>
+    {% endfor %}
+
+{% else %}
+    <p>No polls are available.</p>
+
+{% endif %}
+
+
+  <div class="pagination" >
+            <span class="step-links">
+                {% if latest_question_list.has_previous %}
+
+
+
+                     <li style="display:inline;"><a href= "?page={{ latest_question_list.previous_page_number }}" >prev </a></li>
+
+                {% endif %}
+                {%for pg in latest_question_list.paginator.page_range%}
+                {%if latest_question_list.number == pg %}
+
+                <li style="display:inline;" class="current"><a href="?page={{pg}}">{{pg}}</a></li>
+                {%else%}
+                 <li style="display:inline;" class="current"><a href="?page={{pg}}">{{pg}}</a></li>
+                {%endif%}
+                {%endfor%}
+
+                </span>
+
+                {% if latest_question_list.has_next %}
+
+                     <li style="display:inline;"><a href="?page={{ latest_question_list.next_page_number }}" >Next </a></li>
+
+                {% endif %}
+            </span>
+        </div>
+{% endblock %}

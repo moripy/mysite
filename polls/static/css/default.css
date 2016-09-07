@@ -1,0 +1,84 @@
+
+        body{ text-align: center;
+            background-color: white;
+
+        }
+        #page{
+            width: 960px;
+            text-align: left;
+            margin: 10px auto 20px auto;
+            background-color: #0c0c0c;
+
+        }
+        #sidebar{
+            float: left;
+            width: 200px;
+            border: 1px solid #efefef;
+
+
+        }
+
+        #content{
+            float: left;
+            width: 700px;
+            border: 2px solid #f00;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin-left: 0px;
+            border-left: 1px solid gray;
+
+        }
+
+
+
+
+        div.content1{
+
+            border:0px solid black;
+            text-align:center;
+            background-color:#F8F8F8;
+             margin: 10px auto 40px auto;
+            border-radius:10px;
+            -webkit-box-shadow: 43px 12px 49px -9px rgba(0,0,0,0.55);
+         -moz-box-shadow: 43px 12px 49px -9px rgba(0,0,0,0.55);
+         box-shadow: 4px 4px 10px -9px rgba(0,0,0,0.55);
+        }
+        .pagination{
+            margin-top: 50px;
+            margin-left: 50px;
+
+        }
+        .pagination a {
+    background: #fff;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 4px 12px;
+    text-decoration: none;
+	line-height: 1.5em;
+            -webkit-border-radius: 10px;
+    -moz-border-radius: 3px;
+    border-radius: 15px;
+        }
+        .pagination a:hover {
+    background-color: #BEBEBE;
+    color: #fff;
+           }
+        .pagination a:active {
+	background: rgba(190, 190, 190, 0.75);
+           }
+
+     div.head{
+
+         background: darkorange;
+         margin-top: 10px;
+          border: 10px solid darkorange;
+
+     }
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: darkorange;
+    clear: left;
+    text-align: center;
+}

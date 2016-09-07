@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<html>
+<head>
+
+    <title> {% block title %} MY Base Template{% endblock  %}</title>
+      <link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}" />
+
+</head>
+
+
+<body>
+
+
+<div class="head" >
+  <p>This is a paragraph.</p>
+</div>
+
+<div id="page">
+    <div id="sidebar">
+{% block sidebar %}
+    <ul>
+    <li><a href="{% url 'polls:index' %}">Article</a></li>
+
+    <li><a href="/admin/"> admin</a></li>
+    </ul>
+        {% endblock %}
+
+        </div>
+
+    </div>
+
+<div id="content">
+    {% block content %}{% endblock %}
+
+
+    </div>
+<div>
+    <footer>Copyright © W3Schools.com</footer>
+    </div>
+
+
+</body>
+</html>
